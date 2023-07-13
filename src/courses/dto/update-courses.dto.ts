@@ -1,10 +1,4 @@
-import { IsString } from 'class-validator';
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateCoursesDto } from './create-courses.dto';
 
-export class UpdateCoursesDto {
-  @IsString()
-  readonly name: string;
-  @IsString()
-  readonly description: string;
-  @IsString({ each: true })
-  readonly tags: string[];
-}
+export class UpdateCoursesDto extends PartialType(CreateCoursesDto) {}
