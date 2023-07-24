@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export class CourseRefactoringTest1690161272710 implements MigrationInterface {
+export class CourseRefactoring1690178609224 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
       `ALTER TABLE "courses" RENAME COLUMN "name" TO "course"`,

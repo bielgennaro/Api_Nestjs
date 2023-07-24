@@ -9,8 +9,6 @@ export class Tag {
   @Column()
   name: string;
 
-  @ManyToMany(() => Course, (course) => course.tags, {
-    cascade: true,
-  })
+  @ManyToMany(() => Course, (course) => course.tags)
   courses: Course[];
 }
