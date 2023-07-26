@@ -1,7 +1,6 @@
 import { DataSource } from 'typeorm';
 import { Course } from './courses/entities/course.entitiy';
 import { Tag } from './courses/entities/tag.entity';
-import { CourseRefactoring1690178609224 } from './migrations/1690178609224-CourseRefactoring';
 
 export const databaseProviders = [
   {
@@ -13,7 +12,7 @@ export const databaseProviders = [
         port: 5432,
         username: 'postgres',
         password: 'docker',
-        database: 'nestjs-app',
+        database: 'cursonestjs',
         entities: [Tag, Course],
         synchronize: false,
       });
@@ -28,8 +27,8 @@ export const dataSource = new DataSource({
   port: 5432,
   username: 'postgres',
   password: 'docker',
-  database: 'nestjs-app',
+  database: 'cursonestjs',
   entities: [Tag, Course],
   synchronize: false,
-  migrations: [CourseRefactoring1690178609224],
+  migrations: [],
 });
