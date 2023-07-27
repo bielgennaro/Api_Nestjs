@@ -30,5 +30,5 @@ export const dataSource = new DataSource({
   database: 'cursonestjs',
   entities: [Tag, Course],
   synchronize: false,
-  migrations: [],
+  migrations: ['./src/migrations/*.ts'],
 });
